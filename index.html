@@ -2,32 +2,133 @@
 <html>
 <head>
 <title>Jacob Roedel's Website</title>
+<style>
+    p {
+      border: 2px solid rgb(115, 10, 235);
+    }
+    </style>
 </head>
+<p1><a href="#About Me">About Me</a></p1><br>
+<p1><a href="#Projects">Projects</a></p1>
 <body>
-<h1>About Me</h1>
+<h1 id = "About Me"> <i>About Me</i></h1>
 <p> My name is Jacob Roedel and I currently a sophomore at The George Washington University.
     I am pursuing a Bachelors of Science in Computer Science with a Minor in Economics.
     I participate in organizations and clubs such as the University Honors Program, as well
     as the GW Association for Computing Machinery.<br></p>
-<h1>Projects</h1>
+    <h1 id = "Projects"> <i>Projects</i></h1>
 <h2> Mini Search Engine<br></h2>
+<p>
+    Mini Search Engine is a document retrieval system made in C. I created three unique structs to maintain a hashmap
+    of linked lists, in which each node in the first layer of linked lists was the head of a second layer of linked lists. The first layer of linked lists
+    contain nodes which represent each unique word that appears in all of the documents we are searching through, and the total number of documents it appears in. The second layer of linked lists represents
+    each document that the word appears, and how many times it appears in a given document.
+    <br><br>
+    <b>Training Phase</b>
+    <br>
+    The first phase of this project is taking each unique word that appears in the total set of documents, and adding
+    it to the hashmap structure. After, I remove stop words, words that appear frequently such as articles, so that it doesn't affect
+    the ranking of the documents.
+    <br><br>
+    <b>Search and Ranking Phase</b>
+    <br>
+    The second phase of this project is to use the tf-idf ranking system (term frequency-inverse document frequency) 
+    to determine the relevancy of a given word. This ranking is determined by multiplying the frequency of a word in the given document and the inverse document frequency (log(Document Frequency/# of Documents)).
+    I then summed the tf-idf for each word in each document, and used a bubble sort to display the ranking in descending order of the set of documents.
+
+</p>
 <h2> Encyrption<br></h2>
 <h2> Cat and Mouse Simulation<br></h2>
-<p>The Cat and Mouse Simulation is a OOP based project in Java that plots creatures onto a visual grid for the user to see.
+<p>Cat and Mouse Simulation is a OOP based project in Java that plots creatures onto a visual grid.
     A hashmap is used to represent the entire grid, and linked lists at each coordinate point to store a list of creatures at each point.
-    There are 4 unique types of creatures in the simulation - Mouse, Cat, Zombie Cat and Terminator. The pattern of movement is unique and random for Mice and Terminators,
-    but Cats and Zombie Cats have non-random movements in which Cats chase Mice, and Zombie Cats chase Cats and Mice. When chasing, the creatures change color
-    to display that is in range of tracking a specific creature.
+    There are 4 unique types of creatures in the simulation - Mouse, Cat, Zombie Cat and Terminator.<br>
+    <br>
+    <b>Mice</b> 
+    <br>
+    - Randomly turns direction 20% of the time, and moves one grid point per round
+    <br>
+    - Procreates every 20 rounds, meaning a new mouse spawns at the current point of the parent mouse
+    <br>
+    - Dies after 30 rounds of simulation
+
+    <br><br>
+    <b>Cat</b>
+    <br>
+    - Randomly turns direction 5% of the time, and moves two grid points per round
+    <br>
+    - Eats mice if they both land on the same grid point
+    <br>
+    - Searches/Chases mice within a 20 grid point radius
+    <br>
+    - Transforms to a zombie cat if it has not eaten in 50 rounds
+
+    <br><br>
+    <b>Zombie Cat</b>
+    <br>
+    - Mimics the movment of a cat when not chasing, and moves three grid points per round
+    <br>
+    - Eats mice and cats if they land on the same grid point: cats turn into zombie cats when eaten
+    <br>
+    - Searches/Chases mice and cats within a 40 grid point radius
+    <br>
+    - Dies after 100 rounds without eating 
+
+    <br><br>
+    <b>Terminator</b>
+    <br>
+    - Randomly turns direction every round
+    <br>
+    - Eats mice, cats, and zombie cats 
+    <br>
+    - Does not track/chase any creatures, and is made to counter the zombie cats
+
+    <br><br>
+    <b>Simulation</b>
+    <br>
+    - A new mice spawns every 100 rounds
+    <br>
+    - A new cat spawns every 25 rounds
+    <br>
+    - A new terminator spawns every 100 rounds
+
 </p>
-<p1>
-    <video width ="500" height = "500" controls loop autoplay muted>
-        <source src="Project2.mp4" type = "video/mp4" >
-       </video>
-       <img src="SimulationKey.png"
-</p1>
+<video width ="500" height = "500" controls loop autoplay muted>
+    <source src="Project2.mp4" type = "video/mp4" >
+</video>
+<style>
+    table,th,td{
+        border:1px solid  black;
+    }
+</style>
+<body>
+    <h2>
+        Simulation Creatures Key
+    </h2>
+    <table style = "width:100%">
+        <tr>
+            <td>Randomly Moving Creatures</td>
+            <td>Color</td>
+            <td>Tracking/Searching Creatures</td>
+            <td>Actively Chasing</td>
+            <td>Not Actively Chasing</td>
+        </tr>
+        <tr>
+            <td>Mice</td>
+            <td bgcolor = "blue"></td>
+            <td>Cat</td>
+            <td bgcolor = "yellow"></td>
+            <td bgcolor = "cyan"></td>
+        </tr>
+        <tr>
+            <td>Terminator</td>
+            <td bgcolor = "magenta"></td>
+            <td>Zombie Cat</td>
+            <td bgcolor = "red"></td>
+            <td bgcolor = "black"></td>
 
-
-
+        </tr>
+    </table>
+</body>
 
 
 </body>
