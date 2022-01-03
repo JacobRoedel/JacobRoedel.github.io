@@ -2,20 +2,66 @@
 <html>
 <head>
 <title>Jacob Roedel's Website</title>
-<style>
-    p {
-      border: 2px solid rgb(115, 10, 235);
-    }
-    </style>
 </head>
+<style>
+    a{
+        color: #2F56B0;
+        position: relative;
+        text-decoration: none;
+        transition: color .4s ease-out
+    }
+    a::after{
+        border-radius: 1em;
+        border-top: .1em solid #2F56B0;
+        content: "";
+        position: absolute;
+            right: 100%;
+            bottom: .14em;
+            left: 0; 
+        transition: right .4s cubic-bezier(0,.5,0,1), 
+            border-color .4s ease-out ;
+    }
+    a:hover{
+        color: #457DFB;
+        text-decoration: none;
+    }
+    a:hover::after{
+        animation: anchor-underline 1.5s cubic-bezier(0,.5,0,1) infinite;
+        border-color: #457DFB;
+        
+    }
+    @keyframes anchor-underline {
+        0%, 10%{
+            left:0;
+            right: 100%;
+        }
+        40%, 60%{
+            left: 0;
+            right: 0;
+        }
+        90%, 100%{
+            left:100%;
+            right:0;
+        }
+    }
+</style>
 <p1><a href="#About Me">About Me</a></p1><br>
 <p1><a href="#Projects">Projects</a></p1>
 <body>
+<header>
+    <section class = "header">
+        
+        <h1 class = "ht"> Jacob Roedel's Portfolio</h1>
+        <h3 class = "hst">Github Pages</h3>
+        
+    </section>
+</header>
 <h1 id = "About Me"> <i>About Me</i></h1>
 <p> My name is Jacob Roedel and I currently a sophomore at The George Washington University.
     I am pursuing a Bachelors of Science in Computer Science with a Minor in Economics.
     I participate in organizations and clubs such as the University Honors Program, as well
     as the GW Association for Computing Machinery.<br></p>
+    <hr>
     <h1 id = "Projects"> <i>Projects</i></h1>
 <h2> Mini Search Engine<br></h2>
 <p>
@@ -38,6 +84,11 @@
 
 </p>
 <h2> Encyrption<br></h2>
+<p>
+    Encyrption is a basic encryption project in LC-3 assembly language that incorporates Vigenere and Caeser ciphers to both encrypt and decrypt
+    a 10 character input wtih a 5 character input string. I implemented subroutines to implement multiplication, modulo, XOR and other various functions. I stored the ASCII values of the encrypted/decrypted 
+    input in memory at seperate locations, and cleared the memory upon request to exit the program
+</p>
 <h2> Cat and Mouse Simulation<br></h2>
 <p>Cat and Mouse Simulation is a OOP based project in Java that plots creatures onto a visual grid.
     A hashmap is used to represent the entire grid, and linked lists at each coordinate point to store a list of creatures at each point.
@@ -100,7 +151,7 @@
         border:1px solid  black;
     }
 </style>
-<body>
+
     <h2>
         Simulation Creatures Key
     </h2>
@@ -128,7 +179,8 @@
 
         </tr>
     </table>
-</body>
+    
+
 
 
 </body>
