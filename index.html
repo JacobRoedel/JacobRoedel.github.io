@@ -45,10 +45,38 @@
         }
     }
 </style>
+<style>
+    @keyframes fade-slide-down {
+        0%{
+            opacity: 0;
+            transform: translateY(-4rem);
+        }
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+        
+    }
+    @keyframes pop-in {
+        0%{
+            opacity: 0;
+            transform: translateY(-4rem)scale(.8);
+        }
+        100%{
+            opacity:1;
+            transform: none;
+        }
+        
+    }
+</style>
 <p1><a href="#About Me">About Me</a></p1><br>
 <p1><a href="#Projects">Projects</a></p1>
 <body>
-
+<header>
+    <section class="header-content">
+        <img class = "rocky-dashed animated-pop-in" 
+    </section>
+</header>
 <h1 id = "About Me"> <i>About Me</i></h1>
 <p> My name is Jacob Roedel and I currently a sophomore at The George Washington University.
     I am pursuing a Bachelors of Science in Computer Science with a Minor in Economics.
