@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Jacob Roedel's Website</title>
 </head>
 <style>
+    h1{
+        text-align: center;
+    }
+</style>
+<style>
     a{
-        color: #2F56B0;
+        color: #2b79ee;
         position: relative;
         text-decoration: none;
         transition: color .4s ease-out
@@ -45,25 +50,135 @@
         }
     }
 </style>
-
-<p1><a href="#About Me">About Me</a></p1><br>
-<p1><a href="#Projects">Projects</a></p1>
-<body>
-<header>
-    <section class="header-content">
-        <img class = "rocky-dashed animated-pop-in" src="background.svg">
-        <h1 class = "header-t animate-pop-in">Jacob Roedel's Portfolio</h1> 
-        <h3 class = "header-st animate-pop-in">Github Pages</h3>
+<style>
+    div{
         
-    </section>
-</header>
-<h1 id = "About Me"> <i>About Me</i></h1>
+        
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+</style>
+<style>
+       
+    .AboutMe{
+        justify-content: left;
+        background-color: #00000000;
+        
+        height: 50px;
+        width: 75%;
+        animation: 1.5s slide ease-in-out forwards;
+    }
+    .Projects{
+        justify-content: left;
+        background-color: #00000000;
+        
+        height: 50px;
+        width: 75%;
+        animation: 1.5s slide ease-in-out forwards;
+    }
+
+
+   
+    
+    @keyframes slide {
+        0%{
+            
+        }
+        33%{
+            transform: translateX(50%);
+        }
+        100%{
+            transform: translate();
+            animation-play-state:paused;
+        }
+        
+    }
+    
+    
+    *{
+      margin:0;
+      padding:0;
+    }
+    .container {
+      background: rgb(199, 200, 245);
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+     
+    }
+    .box {
+      border-radius: 20px;
+      margin: auto;
+      width:60px;
+      height: 60px;
+      background: #f0f0f0;
+      animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;
+      
+    }
+
+    @keyframes anime {
+      0% {
+        width: 60px;
+        height: 60px;
+        background: #f0f0f0;
+       
+                      color: transparent;
+      }
+      25% {
+        width: 60px;
+        height: 60px;
+        background: #f8f8f8;
+        
+                     color: transparent;
+      }
+      50% {
+        width: 60px;
+        height: 240px;
+        background: #f8f8f8;
+       
+                     color: transparent;
+      }
+      70%{
+          color: transparent;
+      }
+      100% {
+        width: 480px;
+        height: 240px;
+        background: #fafafa;
+        
+        color: black;
+        
+      }
+    }
+    
+</style>
+
+<!--<p1><a href="#About Me">About Me</a></p1><br>
+<p1><a href="#Projects">Projects</a></p1>
+
+<br><br>
+-->
+<body style = "background-color: rgb(199, 200, 245);">
+    <div class="container"> 
+        <div class="box" style= "color: transparent;" >Jacob Roedel's Website</div>
+      </div>
+<!--<div class = "AboutMe" style = "color:black;"> <b><i>About Me</i></b></div>-->
+<br>
+<h1 id = "About Me" style = "text-align: left;"><i>About Me</i></h1>
+<br>
 <p> My name is Jacob Roedel and I currently a sophomore at The George Washington University.
     I am pursuing a Bachelors of Science in Computer Science with a Minor in Economics.
     I participate in organizations and clubs such as the University Honors Program, as well
     as the GW Association for Computing Machinery.<br></p>
     <hr>
-    <h1 id = "Projects"> <i>Projects</i></h1>
+    <!--<div class = "Projects" style = "color:black;"> <b><i>Projects</i></b></div>-->
+    <h1 id = "Projects" style = "text-align: left;"> <i>Projects</i></h1>
+    <br>
 <h2> Mini Search Engine<br></h2>
 <p>
     Mini Search Engine is a document retrieval system made in C. I created three unique structs to maintain a hashmap
@@ -82,6 +197,7 @@
     The second phase of this project is to use the tf-idf ranking system (term frequency-inverse document frequency) 
     to determine the relevancy of a given word. This ranking is determined by multiplying the frequency of a word in the given document and the inverse document frequency (log(Document Frequency/# of Documents)).
     I then summed the tf-idf for each word in each document, and used a bubble sort to display the ranking in descending order of the set of documents.
+    <br><br>
 
 </p>
 <h2> Encyrption<br></h2>
@@ -90,6 +206,7 @@
     a 10 character input wtih a 5 character input string. I implemented subroutines to implement multiplication, modulo, XOR and other various functions. I stored the ASCII values of the encrypted/decrypted 
     input in memory at seperate locations, and cleared the memory upon request to exit the program
 </p>
+<br><br>
 <h2> Cat and Mouse Simulation<br></h2>
 <p>Cat and Mouse Simulation is a OOP based project in Java that plots creatures onto a visual grid.
     A hashmap is used to represent the entire grid, and linked lists at each coordinate point to store a list of creatures at each point.
