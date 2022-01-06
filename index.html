@@ -122,9 +122,28 @@ h1{
   white-space: nowrap;
   overflow: hidden;
   width: 30em;
-        animation: type 5s steps(50,end) infinite alternate forwards 2s ;
+        animation: type 4s steps(60,end) infinite alternate forwards 2s ;
     }
-    
+    p{
+      color:transparent;
+      animation: 5s appear 1 3s forwards;
+    }
+    h1{
+      color: transparent;
+      animation: 5s appear 1 3s forwards;
+    }
+    h2{
+      color:transparent;
+      animation: 5s appear 1 3s forwards;
+    }
+    @keyframes appear{
+      50%{
+        color: black;
+      }
+      100%{
+        color: black;
+      }
+    }
     
     .box {
       border-radius: 50px;
@@ -668,6 +687,7 @@ h1{
     </table>
     
     <h1 id = "ContactMe"><i><b>Contact Me</b></i></h1>
+    <a href = ""
 
 
 </body>
