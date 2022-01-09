@@ -14,7 +14,7 @@ h1{
         position: relative;
         text-decoration: none;
         transition: color .4s ease-out; 
-        animation: 5s change-color 1 forwards 2.5s
+        animation: 5s change-color 1 forwards 2.5s;
     }
     a::after{
         border-radius: 1em;
@@ -124,15 +124,31 @@ h1{
   width: 30em;
         animation: type 4s steps(60,end) infinite alternate forwards 2s ;
     }
+    a{
+      color:transparent;
+      animation: 5s appear 1 3s forwards;
+      
+    }
     p{
       color:transparent;
       animation: 5s appear 1 3s forwards;
+      text-align: center;
     }
     h1{
       color: transparent;
       animation: 5s appear 1 3s forwards;
     }
     h2{
+      color:transparent;
+      animation: 5s appear 1 3s forwards;
+      text-align: center;
+    }
+    video{
+      width: 100%;
+      height:auto
+    }
+    
+    table{
       color:transparent;
       animation: 5s appear 1 3s forwards;
     }
@@ -190,6 +206,9 @@ h1{
         border-radius: 50px;
         animation: anime-cont 3s cubic-bezier(0.16, 1, 0.3, 1) 1 forwards;
         
+    }
+    .linked{
+      font-size: medium;
     }
 
     @keyframes type{
@@ -548,23 +567,22 @@ h1{
     <p id="abPar">
      My name is Jacob Roedel and I currently a sophomore at The George Washington University.
         I am pursuing a Bachelors of Science in Computer Science with a Minor in Economics.
-        I participate in organizations and clubs such as the University Honors Program, as well
-        as the GW Association for Computing Machinery.<br><br>
-        Coursework: Software Engineering, Computer Architecture, Discrete Structures I and II<br>
-        Currently Enrolled: Systems Engineering, Database Systems, Foundations of Computing
+        I participate in organizations and clubs such as the University Honors Program and the GW Association for Computing Machinery.<br><br>
+        Coursework: Software Engineering, Computer Architecture, Discrete Structures I and II, Data Structures and Algorithms<br>
+        Currently Enrolled: Systems Programming, Database Systems, Foundations of Computing
     </p>
     
 
 <!--<h1 id = "About Me" style = "text-align: left;"><i>About Me</i></h1>-->
 <br>
 <h1 id = "Projects"><i><b>Projects</b></i></h1>
-<h2><b>Mini Search Engine</b></h2>
+<h2><b>Mini Search Engine(C)</b></h2>
 
     
     <p>
-        Mini Search Engine is a document retrieval system made in C. I created three unique structs to maintain a hashmap
-        of linked lists, in which each node in the first layer of linked lists was the head of a second layer of linked lists. The first layer of linked lists
-        contain nodes which represent each unique word that appears in all of the documents we are searching through, and the total number of documents it appears in. The second layer of linked lists represents
+        Mini Search Engine is a document retrieval system. I created three unique structs to maintain a hashmap
+        of linked lists, in which each node in the first layer of linked lists points to the head of the second layer of linked lists. The first layer of linked lists
+        contain nodes which represent each unique word that appears in the document set, and the total number of documents it appears in. The second layer of linked lists represents
         each document that the word appears, and how many times it appears in a given document.
         <br><br>
         <b>Training Phase</b>
@@ -588,9 +606,9 @@ h1{
     
 
 
-<h2> Encryption<br></h2>
+<h2>Encryption(LC-3 Assembly)<br></h2>
 <p>
-    Encryption is a basic encryption project in LC-3 assembly language that incorporates Vigenere and Caesar ciphers to both encrypt and decrypt
+    Encryption is a basic encryption project that incorporates Vigenere and Caesar ciphers to both encrypt and decrypt
     a 10 character input with a 5 character input string. I implemented subroutines to implement multiplication, modulo, XOR and other various functions. I stored the ASCII values of the encrypted/decrypted 
     input in memory at separate locations, and cleared the memory upon request to exit the program
 </p>
@@ -649,9 +667,12 @@ h1{
     - A new terminator spawns every 100 rounds
 
 </p>
-<video width ="500" height = "500" controls loop autoplay muted>
+
+<video width ="1000" height = "500" controls loop autoplay muted>
     <source src="Project2.mp4" type = "video/mp4" >
+    
 </video>
+
 <style>
     table,th,td{
         border:1px solid  black;
@@ -666,8 +687,8 @@ h1{
             <td>Randomly Moving Creatures</td>
             <td>Color</td>
             <td>Tracking/Searching Creatures</td>
-            <td>Actively Chasing</td>
             <td>Not Actively Chasing</td>
+            <td>Actively Chasing</td>
         </tr>
         <tr>
             <td>Mice</td>
@@ -687,7 +708,14 @@ h1{
     </table>
     
     <h1 id = "ContactMe"><i><b>Contact Me</b></i></h1>
-    <a href = ""
+    <a href = "https://www.linkedin.com/in/jacob-roedel-/" target ="_blank"><div class = "linked"><b>LinkedIn</b></a>
+
+    </div>
+
+    
+
+
+    <p><b>jacobroedel22@gwmail.gwu.edu</b></p>
 
 
 </body>
