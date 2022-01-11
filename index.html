@@ -71,21 +71,21 @@ h1{
     }
 </style>
 <style>
-       #topBtn {
-  display: none;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  z-index: 99;
-  font-size: 12px;
-  border: none;
-  outline: none;
-  background-color: #01ffc8;
-  font-family: garamond;
-  color: black;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 50px;
+  #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 99;
+      font-size: 12px;
+      border: none;
+      outline: none;
+      background-color: #01ffc8;
+      font-family: garamond;
+      color: black;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 50px;
 }
 
 #topBtn:hover {
@@ -95,19 +95,6 @@ h1{
 
     
     
-    @keyframes slide {
-        0%{
-            
-        }
-        33%{
-            transform: translateX(50%);
-        }
-        100%{
-            transform: translate();
-            animation-play-state:paused;
-        }
-        
-    }
     
     
     *{
@@ -116,41 +103,36 @@ h1{
     }
     h{
         
- text-align: center;
-
- justify-content: center;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 30em;
-        animation: type 4s steps(60,end) infinite alternate forwards 2s ;
+        text-align: center;
+        justify-content: center;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 30em;
+        animation: type 5s steps(60,end) infinite alternate forwards 2s ;
     }
     a{
       color:transparent;
-      animation: 5s appear 1 3s forwards;
+      animation: 4s appear 1 32 forwards;
       
     }
     p{
       color:transparent;
-      animation: 5s appear 1 3s forwards;
+      animation: 4s appear 1 2s forwards;
       text-align: center;
     }
     h1{
       color: transparent;
-      animation: 5s appear 1 3s forwards;
+      animation: 4s appear 1 2s forwards;
     }
     h2{
       color:transparent;
-      animation: 5s appear 1 3s forwards;
+      animation: 4s appear 1 2s forwards;
       text-align: center;
-    }
-    video{
-      width: 100%;
-      height:auto
     }
     
     table{
       color:transparent;
-      animation: 5s appear 1 3s forwards;
+      animation: 4s appear 1 2s forwards;
     }
     @keyframes appear{
       50%{
@@ -209,6 +191,21 @@ h1{
     }
     .linked{
       font-size: medium;
+      
+    }
+    .engine{
+      font-size: medium;
+      padding:1px;
+    }
+    .catmouse{
+      font-size: medium;
+    }
+
+    
+    mark{
+      color: transparent;
+      background-color: transparent;
+      animation: 4s links forwards 2s
     }
 
     @keyframes type{
@@ -221,82 +218,18 @@ h1{
         from {width: 0;}
         
     }
-    /* .b1{
-         background-color: transparent;
-        border: none;
-       animation: 5s button-appear 1 forwards;
-       font-family: garamond;
-       color:black;
-       
+    @keyframes links{
+      50%{
+        color:rgb(73, 39, 226);
+        
+      }
+      100%{
+        color:rgb(73, 39, 226);
+        
+      }
     }
-    .b2{
-        background-color: transparent;
-        border: none;
-       animation: 5s button-appear 1 forwards;
-       font-family: garamond;
-       color:black;
-    }
-    .b3{
-         background-color: transparent;
-        border: none;
-       animation: 5s button-appear 1 forwards;
-       font-family: garamond;
-       color:black;
-       
-    }
-    .b4{
-        background-color: transparent;
-        border: none;
-       animation: 5s button-appear 1 forwards;
-       font-family: garamond;
-       color:black;
-    } */
-    
-
-    @keyframes button-appear {
-        0%{
-            color:transparent;
-            border-radius: .5em;
-        }
-        50%{
-        display:inline-block;
-        
-        color:transparent;
-        
-        text-decoration:none;
-        font-family:'Roboto',sans-serif;
-        font-weight:300;
-        
-        
-        text-align:center;
-        border-radius: .5em;
-        font-family: garamond;
-        }
-        75%{
-            color:black;
-            border-radius: .5em;
-            
-        }
-        100%{
-            display:inline-block;
-            box-sizing: border-box;
-        
-        
-        color:black;
-        text-decoration:none;
-        font-family:'Roboto',sans-serif;
-        font-weight:300;
-        
-        
-        text-align:center;
-        
-        font-family: garamond;
-        border-radius: .5em;
-        }
-    }
-    
-    
-    
+   
+  
 
     @keyframes anime-title {
       0% {
@@ -476,11 +409,6 @@ h1{
     
 </style>
 
-<!--<p1><a href="#About Me">About Me</a></p1><br>
-<p1><a href="#Projects">Projects</a></p1>
-
-
--->
 <body id ="main-body" style = "background-color: rgb(199, 200, 245); color: black;">
     
     <div class="box" style= "color: black; font-family: garamond" ><b><i></i></b>
@@ -497,15 +425,7 @@ h1{
     <a href="#Projects"><div class = "projsBox"><i><b>Projects</b></i></a>
     </div>
 
-    <!-- <div class = "abMeBox" style = "font-family: garamond;">
-        
-    </div> 
 
-    <div class = "projsBox" style = "font-family: garamond;">
-       
-    </div>
-     -->
-   
 
 </div>
 <div class = "subjects" style = "font-family: garamond;">
@@ -517,13 +437,6 @@ h1{
     <a href="#ContactMe"><div class = "contBox"><i><b>Contact Me</b></i></a>
     </div>
 
-    <!-- <div class = "resBox" style = "font-family: garamond;">
-        
-    </div>
-
-    <div class = "contBox" style = "font-family: garamond;">
-        
-    </div> -->
     
    
 
@@ -573,7 +486,6 @@ h1{
     </p>
     
 
-<!--<h1 id = "About Me" style = "text-align: left;"><i>About Me</i></h1>-->
 <br>
 <h1 id = "Projects"><i><b>Projects</b></i></h1>
 <h2><b>Mini Search Engine(C)</b></h2>
@@ -588,8 +500,11 @@ h1{
         <b>Training Phase</b>
         <br>
         The first phase of this project is taking each unique word that appears in the total set of documents, and adding
-        it to the hashmap structure. After, I remove stop words, words that appear frequently such as articles, so that it doesn't affect
-        the ranking of the documents.
+        it to the hashmap structure. If the word has not previously appeared in the hashmap, a new node is
+        added to the first layer of linked lists using the hash function, as well as the first node of the second layer containing the first document
+        the word appeared in. If the word has appeared before in the documents, a new node is added to the second layer at the corresponding first layer node with the document that the word appeard in
+        is added to the second layer of linked lists at the. After, I remove stop words - words that appear frequently such as articles(a,an,the) - so that it doesn't affect
+        the ranking of the documents. Stop words are technically defined as words with an inverse document frequency score of 0
         <br><br>
         <b>Search and Ranking Phase</b>
         <br>
@@ -599,21 +514,41 @@ h1{
         <br><br>
     
     </p>
+    <br>
+    <a href = "Project5.mp4" target ="_blank"><div class = "engine"><b><mark>Mini Search Engine Simulation</mark></b></a>
+
+    </div>
 
 
 
-    
+    <br><br>
     
 
 
 <h2>Encryption(LC-3 Assembly)<br></h2>
 <p>
     Encryption is a basic encryption project that incorporates Vigenere and Caesar ciphers to both encrypt and decrypt
-    a 10 character input with a 5 character input string. I implemented subroutines to implement multiplication, modulo, XOR and other various functions. I stored the ASCII values of the encrypted/decrypted 
-    input in memory at separate locations, and cleared the memory upon request to exit the program
+    a 10 character input with a 5 character input key. 
+    <br><br>
+    <b>Key</b>
+    <br>
+    They key is a 5 character string inputted by the user. The first character must be a digit between 0 and 8, the second 
+    character is a non-numeric character or 0, and the last three characters are a decimal number between 0 and 127. If any part of the key doesn't match
+    with the listed criteria, an error message is printed and the user is prompted again to input a key.
+    <br><br>
+    <b>Message</b>
+    <br>
+    The message is a 10 character string inputted by the user. All characters that have ASCII equivalents are valid characters,
+    except for escape characters.
+    <br><br>
+    <b>Encryption</b>
+    <br>
+    
+    
+    
 </p>
 <br><br>
-<h2> Cat and Mouse Simulation<br></h2>
+<h2> Cat ,Mouse, Zombie Cat<br></h2>
 <p>Cat and Mouse Simulation is a OOP based project in Java that plots creatures onto a visual grid.
     A hashmap is used to represent the entire grid, and linked lists at each coordinate point to store a list of creatures at each point.
     There are 4 unique types of creatures in the simulation - Mouse, Cat, Zombie Cat and Terminator.<br>
@@ -667,15 +602,18 @@ h1{
     - A new terminator spawns every 100 rounds
 
 </p>
+<br><br>
+<a href = "Project2.mp4" target ="_blank"><div class = "catmouse"><b><mark>Cat and Mouse Simulation</mark></b></a>
 
-<video width ="1000" height = "500" controls loop autoplay muted>
-    <source src="Project2.mp4" type = "video/mp4" >
-    
-</video>
+</div>
+<br>
+
+
 
 <style>
     table,th,td{
         border:1px solid  black;
+        
     }
 </style>
 
@@ -706,16 +644,21 @@ h1{
 
         </tr>
     </table>
+    <br><br>
+   
+    <br><br>
     
     <h1 id = "ContactMe"><i><b>Contact Me</b></i></h1>
-    <a href = "https://www.linkedin.com/in/jacob-roedel-/" target ="_blank"><div class = "linked"><b>LinkedIn</b></a>
+    <a href = "https://www.linkedin.com/in/jacob-roedel-/" style = "color:rgb(84, 63, 160);"target ="_blank"><div class = "linked"><b><marK>LinkedIn</marK></b></a>
 
     </div>
+    
 
     
 
 
     <p><b>jacobroedel22@gwmail.gwu.edu</b></p>
+    
 
 
 </body>
