@@ -543,15 +543,28 @@ h1{
     <br><br>
     <b>Encryption</b>
     <br>
+    Encrypting the 10 character message is a two-step process. First, I use the Vigenere Cipher to shift the initial message once.
+    This shift is done by conducting an XOR between the ASCII value of each character and the ASCII value of the 
+    second character in the key. Next, a Caesar Cipher is implemented to shift the encrypted message again. This is done by adding the 
+    the ASCII value of each character in the newly encrypted message with the last three character inputs of the key, acting as a 3-digit decimal number, and moduloing the result by 128, since our key allows a number between 0 and 127.
+    <br><br>
+    <b>Decryption</b>
+    <br>
+    Decrypting can only be done if there is already an encrypted message in memory. Decrypting the message is also done in two steps.
+    First, the Caesar Cipher is undone by subtracting the 3-digit number from the character value instead of adding, and then moduloing the result by 128 again. Next, the Caesar Cipher
+    has to be undone, and this process is identical to the encryption in which the values of the half-decrypted message can be XORed with second character of the key.
+
+
     
     
     
 </p>
 <br><br>
-<h2> Cat ,Mouse, Zombie Cat<br></h2>
+<h2> Cat, Mouse, Zombie Cat<br></h2>
 <p>Cat and Mouse Simulation is a OOP based project in Java that plots creatures onto a visual grid.
     A hashmap is used to represent the entire grid, and linked lists at each coordinate point to store a list of creatures at each point.
-    There are 4 unique types of creatures in the simulation - Mouse, Cat, Zombie Cat and Terminator.<br>
+    There are 4 unique types of creatures in the simulation - Mouse, Cat, Zombie Cat and Terminator. Using queues and linked lists to maintain the integrity of the hashmap and grid,
+    creatures and their position are updated every round on the plotter. <br>
     <br>
     <b>Mice</b> 
     <br>
