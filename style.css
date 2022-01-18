@@ -1,0 +1,161 @@
+html{
+    scroll-behavior: smooth;
+}
+p{
+    text-align: center;
+
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+h2{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+h3{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+img{
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+table,th,td{
+    border:1px solid black;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  .centered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .centered-bottom{
+      font-size: 50px;
+    color:white;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.fa-linkedin {
+    background: transparent;
+    color: black;
+    padding: 20px;
+    font-size: 60px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    align-content: center;
+}
+.fa-linkedin:hover{
+    color:white
+}
+.fa-github:hover{
+    color:white
+}
+.fa-github {
+    background: transparent;
+    color: black;
+    padding: 20px;
+    font-size: 60px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    align-content: center;
+}
+a.fa-github:hover::after{
+    transition: 0s;
+    border-color:transparent;
+}
+a.fa-linkedin:hover::after{
+    transition: 0s;
+    border-color:transparent;
+}
+
+
+
+
+
+
+mark{
+    color: #3e8265;
+    background-color: transparent;
+    font-size: medium;
+}
+a{
+    color:transparent;
+    position: relative;
+    text-decoration: none;
+    transition: color .4s ease-out; 
+    animation: 5s change-color 1 forwards 2.5s;
+    
+    
+}
+a::after{
+    border-radius: 1em;
+    border-top: .1em solid black;
+    content: "";
+    position: absolute;
+        right: 100%;
+        bottom: .14em;
+        left: 0; 
+    transition: right .4s cubic-bezier(0,.5,0,1), 
+        border-color .4s ease-out ;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+a:hover::after{
+    animation: anchor-underline 1.5s cubic-bezier(0,.5,0,1) infinite;
+    border-color: black;
+    
+}
+
+@keyframes anchor-underline {
+    0%, 10%{
+        left:0;
+        right: 100%;
+    }
+    40%, 60%{
+        left: 0;
+        right: 0;
+    }
+    90%, 100%{
+        left:100%;
+        right:0;
+    }
+}
+#back {
+    
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    background-color: gray;
+    font-family: garamond;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+#back:hover {
+background-color: #555;
+}

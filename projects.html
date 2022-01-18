@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link href="style.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9e5e5e9812.js" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: #f8eee1;">
+        <h1 id = "Projects"><i><b>Projects</b></i></h1>
+<h2><b>Mini Search Engine(C)</b></h2>
+
+    
+    <p>
+        Mini Search Engine is a document retrieval system. I created three unique structs to maintain a hashmap
+        of linked lists, in which each node in the first layer of linked lists points to the head of the second layer of linked lists. The first layer of linked lists
+        contain nodes which represent each unique word that appears in the document set, and the total number of documents it appears in. The second layer of linked lists represents
+        each document that the word appears, and how many times it appears in a given document.
+        <br><br>
+        <b>Training Phase</b>
+        <br>
+        The first phase of this project is taking each unique word that appears in the total set of documents, and adding
+        it to the hashmap structure. If the word has not previously appeared in the hashmap, a new node is
+        added to the first layer of linked lists using the hash function, as well as the first node of the second layer containing the first document
+        the word appeared in. If the word has appeared before in the documents, a new node is added to the second layer at the corresponding first layer node with the document that the word appeard in
+        is added to the second layer of linked lists at the. After, I remove stop words - words that appear frequently such as articles(a,an,the) - so that it doesn't affect
+        the ranking of the documents. Stop words are technically defined as words with an inverse document frequency score of 0
+        <br><br>
+        <b>Search and Ranking Phase</b>
+        <br>
+        The second phase of this project is to use the tf-idf ranking system (term frequency-inverse document frequency) 
+        to determine the relevancy of a given word. This ranking is determined by multiplying the frequency of a word in the given document and the inverse document frequency (log(Document Frequency/# of Documents)).
+        I then summed the tf-idf for each word in each document, and used a bubble sort to display the ranking in descending order of the set of documents.
+        
+    
+    </p>
+    
+    <p>
+      <a href = "Project5.mp4" target ="_blank"><b><mark>Mini Search Engine Simulation</mark></b></a>
+      
+      
+       
+    </p>
+    
+
+    
+
+
+
+    
+    
+
+
+<h2>Encryption(LC-3 Assembly)<br></h2>
+<p>
+    Encryption is a basic encryption project that incorporates Vigenere and Caesar ciphers to both encrypt and decrypt
+    a 10 character input with a 5 character input key. 
+    <br><br>
+    <b>Key</b>
+    <br>
+    They key is a 5 character string inputted by the user. The first character must be a digit between 0 and 8, the second 
+    character is a non-numeric character or 0, and the last three characters are a decimal number between 0 and 127. If any part of the key doesn't match
+    with the listed criteria, an error message is printed and the user is prompted again to input a key.
+    <br><br>
+    <b>Message</b>
+    <br>
+    The message is a 10 character string inputted by the user. All characters that have ASCII equivalents are valid characters,
+    except for escape characters.
+    <br><br>
+    <b>Encryption</b>
+    <br>
+    Encrypting the 10 character message is a two-step process. First, I use the Vigenere Cipher to shift the initial message once.
+    This shift is done by conducting an XOR between the ASCII value of each character and the ASCII value of the 
+    second character in the key. Next, a Caesar Cipher is implemented to shift the encrypted message again. This is done by adding the 
+    the ASCII value of each character in the newly encrypted message with the last three character inputs of the key, acting as a 3-digit decimal number, and moduloing the result by 128, since our key allows a number between 0 and 127.
+    <br><br>
+    <b>Decryption</b>
+    <br>
+    Decrypting can only be done if there is already an encrypted message in memory. Decrypting the message is also done in two steps.
+    First, the Caesar Cipher is undone by subtracting the 3-digit number from the character value instead of adding, and then moduloing the result by 128 again. Next, the Caesar Cipher
+    has to be undone, and this process is identical to the encryption in which the values of the half-decrypted message can be XORed with second character of the key.
+  <br><br>
+    
+<p>
+  <a href = "Encryption.mp4" target ="_blank"><b><mark>Encryption/Decryption Simulation</mark></b></a>
+<br>
+
+<a href = "2461 Project 4 - Algorithm flowchart example (1).pdf" target ="_blank"><b><mark>Algorithm Flowchart</mark></b></a>
+</p>
+
+
+
+
+
+<h2> Cat, Mouse, Zombie Cat<br></h2>
+<p>Cat and Mouse Simulation is a OOP based project in Java that plots creatures onto a visual grid.
+    A hashmap is used to represent the entire grid, and linked lists at each coordinate point to store a list of creatures at each point.
+    There are 4 unique types of creatures in the simulation - Mouse, Cat, Zombie Cat and Terminator. Using queues and linked lists to maintain the integrity of the hashmap and grid,
+    creatures and their position are updated every round on the plotter. <br>
+    <br>
+    <b>Mice</b> 
+    <br>
+    - Randomly turns direction 20% of the time, and moves one grid point per round
+    <br>
+    - Procreates every 20 rounds, meaning a new mouse spawns at the current point of the parent mouse
+    <br>
+    - Dies after 30 rounds of simulation
+
+    <br><br>
+    <b>Cat</b>
+    <br>
+    - Randomly turns direction 5% of the time, and moves two grid points per round
+    <br>
+    - Eats mice if they both land on the same grid point
+    <br>
+    - Searches/Chases mice within a 20 grid point radius
+    <br>
+    - Transforms to a zombie cat if it has not eaten in 50 rounds
+
+    <br><br>
+    <b>Zombie Cat</b>
+    <br>
+    - Mimics the movement of a cat when not chasing, and moves three grid points per round
+    <br>
+    - Eats mice and cats if they land on the same grid point: cats turn into zombie cats when eaten
+    <br>
+    - Searches/Chases mice and cats within a 40 grid point radius
+    <br>
+    - Dies after 100 rounds without eating 
+
+    <br><br>
+    <b>Terminator</b>
+    <br>
+    - Randomly turns direction every round
+    <br>
+    - Eats mice, cats, and zombie cats 
+    <br>
+    - Does not track/chase any creatures, and is made to counter the zombie cats
+
+    <br><br>
+    <b>Simulation</b>
+    <br>
+    - A new mice spawns every 100 rounds
+    <br>
+    - A new cat spawns every 25 rounds
+    <br>
+    - A new terminator spawns every 100 rounds
+
+</p>
+
+<p>
+  <a href = "Project2.mp4" target ="_blank"><b><mark>Cat and Mouse Simulation</mark></b></a>
+
+<br>
+<a href = "UML.png" target ="_blank"><b><mark>UML Diagram</mark></b></a>
+</p>
+<h2>
+  Simulation Creatures Key
+</h2>
+<table style = "width:100%">
+  <tr>
+      <td>Randomly Moving Creatures</td>
+      <td>Color</td>
+      <td>Tracking/Searching Creatures</td>
+      <td>Not Actively Chasing</td>
+      <td>Actively Chasing</td>
+  </tr>
+  <tr>
+      <td>Mice</td>
+      <td bgcolor = "blue"></td>
+      <td>Cat</td>
+      <td bgcolor = "yellow"></td>
+      <td bgcolor = "cyan"></td>
+  </tr>
+  <tr>
+      <td>Terminator</td>
+      <td bgcolor = "magenta"></td>
+      <td>Zombie Cat</td>
+      <td bgcolor = "red"></td>
+      <td bgcolor = "black"></td>
+
+  </tr>
+</table>
+<button onclick="window.location.href = 'index.html';" id = "back">Back To Main Page</button>
+<script>
+  
+  var back = document.getElementById("back");
+
+
+  </script>
+
+    </body>
+    
+</html>
