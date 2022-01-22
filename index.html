@@ -9,52 +9,7 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <style>
-h1{
-    text-align: center;
-}
-</style>
-<style>
-    a{
-        color:transparent;
-        position: relative;
-        text-decoration: none;
-        transition: color .4s ease-out; 
-        animation: 5s change-color 1 forwards 2.5s;
-    }
-    a::after{
-        border-radius: 1em;
-        border-top: .1em solid black;
-        content: "";
-        position: absolute;
-            right: 100%;
-            bottom: .14em;
-            left: 0; 
-        transition: right .4s cubic-bezier(0,.5,0,1), 
-            border-color .4s ease-out ;
-    }
-    a:hover{
-        color: black;
-        text-decoration: none;
-    }
-    a:hover::after{
-        animation: anchor-underline 1.5s cubic-bezier(0,.5,0,1) infinite;
-        border-color: black;
-        
-    }
-    @keyframes anchor-underline {
-        0%, 10%{
-            left:0;
-            right: 100%;
-        }
-        40%, 60%{
-            left: 0;
-            right: 0;
-        }
-        90%, 100%{
-            left:100%;
-            right:0;
-        }
-    }
+    
     @keyframes change-color {
         50%{
             color: black;
@@ -169,7 +124,7 @@ h1{
         white-space: nowrap;
         overflow: hidden;
         width: 30em;
-        animation: type 6s steps(60,end) infinite alternate forwards 1s;
+        animation: type 6s steps(60,end) infinite alternate forwards .75s;
     }
     .cs{
       font-family: garamond;
@@ -181,7 +136,7 @@ h1{
         white-space: nowrap;
         overflow: hidden;
         width: 30em;
-      animation: type 6s steps(60,end) infinite alternate forwards 1s;
+      animation: type 6s steps(60,end) infinite alternate forwards .75s;
     }
     /* .box {
       border-radius: 50px;

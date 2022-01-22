@@ -22,9 +22,9 @@
         The first phase of this project is taking each unique word that appears in the total set of documents, and adding
         it to the hashmap structure. If the word has not previously appeared in the hashmap, a new node is
         added to the first layer of linked lists using the hash function, as well as the first node of the second layer containing the first document
-        the word appeared in. If the word has appeared before in the documents, a new node is added to the second layer at the corresponding first layer node with the document that the word appeard in
-        is added to the second layer of linked lists at the. After, I remove stop words - words that appear frequently such as articles(a,an,the) - so that it doesn't affect
-        the ranking of the documents. Stop words are technically defined as words with an inverse document frequency score of 0
+        the word appeared in. If the word has appeared before in the documents, a new node is added to the second layer 
+        at the corresponding first layer node with the document that the word appeared in. After, I remove stop words - words that appear frequently such as articles(a,an,the) - so that it doesn't affect
+        the ranking of the documents. Stop words are technically defined as words with an inverse document frequency score of 0.
         <br><br>
         <b>Search and Ranking Phase</b>
         <br>
@@ -58,7 +58,7 @@
     <br><br>
     <b>Key</b>
     <br>
-    They key is a 5 character string inputted by the user. The first character must be a digit between 0 and 8, the second 
+    They key is a 5 character string inputted by the user. The first character must be an integer between 0 and 8, the second 
     character is a non-numeric character or 0, and the last three characters are a decimal number between 0 and 127. If any part of the key doesn't match
     with the listed criteria, an error message is printed and the user is prompted again to input a key.
     <br><br>
@@ -181,6 +181,7 @@
 
   </tr>
 </table>
+<br><br><br>
 <button onclick="window.location.href = 'index.html';" id = "back">Back To Main Page</button>
 <script>
   
