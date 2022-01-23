@@ -1,9 +1,25 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 html{
     scroll-behavior: smooth;
 }
 p{
     text-align: center;
+    justify-content: center;
+    
 
+}
+h{
+        
+    text-align: center;
+   
 }
 h1{
     text-align: center;
@@ -32,25 +48,86 @@ table,th,td{
     position: relative;
     text-align: center;
     color: white;
+}
+div{
+        
+        
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.name{
+    font-size: 75px;
+    color:transparent;
+    text-align: center;
+      justify-content: center;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 30em;
+      animation: type 6s steps(60,end) 1 alternate forwards .75s;
   }
+  .cs{
+    font-family: garamond;
+    font-weight: bold;
+    font-style: italic;
+    color:transparent;
+    text-align: center;
+      justify-content: center;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 30em;
+    animation: type 6s steps(60,end) 1 alternate forwards 1.5s;
+  }
+.abMeBox{
+    width: 100%;
+    height: 0px;
+    color:white;
+    justify-content: center;
+    border-radius: 0px;
+    animation: anime-abMe 2s cubic-bezier(0.16, 1, 0.3, 1) 1 forwards;
+}
+.projsBox{
+    width: 100%;
+    height: 0px;
+    border-radius: 0px;
+    animation: anime-projs 2s cubic-bezier(0.16, 1, 0.3, 1) 1 forwards;
+    
+}
+.resBox{
+    width: 100%;
+    height: 0px;
+    
+    justify-content: center;
+    border-radius: 0px;
+    animation: anime-res 2s cubic-bezier(0.16, 1, 0.3, 1) 1 forwards;
+}
+.contBox{
+    width: 100%;
+    height: 0px;
+    border-radius: 0px;
+    animation: anime-cont 2s cubic-bezier(0.16, 1, 0.3, 1) 1 forwards;
+    
+}
   
   
-  .centered {
+    .centered {
     position: absolute;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  .centered-bottom{
-      font-size: 50px;
+    }
+    .centered-bottom{
+        font-size: 50px;
     color:white;
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+    }
 
-.fa-linkedin {
+    .fa-linkedin {
     background: transparent;
     color: black;
     padding: 20px;
@@ -59,14 +136,16 @@ table,th,td{
     text-align: center;
     text-decoration: none;
     align-content: center;
-}
-.fa-linkedin:hover{
-    color:white
-}
-.fa-github:hover{
-    color:white
-}
-.fa-github {
+    }
+    .fa-linkedin:hover{
+    transition: .75s;
+    color:white !important;
+    }
+    .fa-github:hover{
+        transition: .75s;
+    color:white !important
+    }
+    .fa-github {
     background: transparent;
     color: black;
     padding: 20px;
@@ -75,36 +154,56 @@ table,th,td{
     text-align: center;
     text-decoration: none;
     align-content: center;
-}
-a.fa-github:hover::after{
+    }
+    a.fa-github:hover::after{
     transition: 0s;
     border-color:transparent;
-}
-a.fa-linkedin:hover::after{
+    }
+    a.fa-linkedin:hover::after{
     transition: 0s;
     border-color:transparent;
-}
+    }
+    a.proj5:hover::after{
+        transition: 0s;
+        border-color: #3e8265;
+    }
+    a.enc:hover::after{
+        transition: 0s;
+        border-color: #3e8265;
+    }
+    a.flow:hover::after{
+        transition: 0s;
+        border-color: #3e8265;
+    }
+    a.sim:hover::after{
+        transition: 0s;
+        border-color: #3e8265;
+    }
+    a.uml:hover::after{
+        transition: 0s;
+        border-color: #3e8265;
+    }
 
 
 
 
 
 
-mark{
+    mark{
     color: #3e8265;
     background-color: transparent;
     font-size: medium;
-}
-a{
+    }
+    a{
     color:transparent;
     position: relative;
     text-decoration: none;
     transition: color .4s ease-out; 
     animation: 5s change-color 1 forwards 2.5s;
-    
-    
-}
-a::after{
+
+
+    }
+    a::after{
     border-radius: 1em;
     border-top: .1em solid black;
     content: "";
@@ -114,18 +213,22 @@ a::after{
         left: 0; 
     transition: right .4s cubic-bezier(0,.5,0,1), 
         border-color .4s ease-out ;
-}
-a:hover{
+    }
+    a:hover{
     color: black;
     text-decoration: none;
-}
-a:hover::after{
+    }
+    a:hover::after{
     animation: anchor-underline 1.5s cubic-bezier(0,.5,0,1) infinite;
     border-color: black;
-    
-}
 
-@keyframes anchor-underline {
+    }
+    .indented {
+        padding-left: 25pt;
+        padding-right: 25pt;
+      }
+
+    @keyframes anchor-underline {
     0%, 10%{
         left:0;
         right: 100%;
@@ -138,9 +241,194 @@ a:hover::after{
         left:100%;
         right:0;
     }
-}
-#back {
-    
+    }
+    @keyframes change-color {
+    50%{
+        color: black;
+    }
+    100%{
+        color:black;
+    }
+    }
+    @keyframes type{
+        0%{
+            color:black;
+        }
+        100%{
+            color:black;
+        }
+        from {width: 0;}
+        
+    }
+    @keyframes intro{
+        
+        from {width: 0;}
+        
+    }
+    @keyframes links{
+      50%{
+        color:rgb(73, 39, 226);
+        
+      }
+      100%{
+        color:rgb(73, 39, 226);
+        
+      }
+    }
+   
+  
+
+    @keyframes anime-projs {
+      0% {
+        width: 100%;
+        height: 0px;
+        background: #f9e6c7;
+        color: transparent;
+      }
+      10%{
+        width: 100%;
+        height: 0px;
+      }
+      
+      25% {
+
+        background: #f9e6c7;
+        color: transparent;
+      }
+      50% {
+        width: 100%;
+        height: 60px;
+        background:#f9e6c7;
+        color: transparent;
+      }
+      70%{
+          color: black;
+      }
+      100% {
+        width: 100%;
+        height: 215px;
+        background: #f9e6c7;
+        
+        color: black;
+        
+      }
+    }
+    @keyframes anime-abMe {
+      0% {
+        
+        width: 100%;
+        height: 0px;
+        background: #1f493e;
+        color: transparent;
+      }
+      10%{
+        width: 100%;
+        height: 0px;
+      }
+      
+      25% {
+
+        background: #1f493e;
+        color: transparent;
+      }
+      50% {
+        width: 100%;
+        height: 60px;
+        background: #1f493e;
+        color: transparent;
+      }
+      70%{
+          color: white;
+      }
+      100% {
+        width: 100%;
+        height: 215px;
+        background: #1f493e;
+        
+        color: white;
+        
+      }
+    }
+    @keyframes anime-res {
+      0% {
+        width: 100%;
+        height: 0px;
+        background: #fd9685;
+        color: transparent;
+      }
+      10%{
+        width: 100%;
+        height: 0px;
+      }
+      
+      25% {
+
+        background: #fd9685;
+        color: transparent;
+      }
+      50% {
+        width: 100%;
+        height: 60px;
+        background: #fd9685;
+        color: transparent;
+      }
+      70%{
+          color: black;
+      }
+      100% {
+        width: 100%;
+        height: 215px;
+        background: #fd9685;
+        
+        color: black;
+        
+      }
+    }
+    @keyframes anime-cont {
+      0% {
+        width: 100%;
+        height: 0px;
+        background: #7f7272;
+        color: transparent;
+      }
+      10%{
+        width: 100%;
+        height: 0px;
+      }
+      
+      25% {
+
+        background: #7f7272;
+        color: transparent;
+      }
+      50% {
+        width: 100%;
+        height: 60px;
+        background: #7f7272;
+        color: transparent;
+      }
+      70%{
+          color: black;
+      }
+      100% {
+        width: 100%;
+        height: 215px;
+        background: #7f7272;
+        
+        color: black;
+        
+      }
+    }
+    @keyframes appear{
+        50%{
+          color: black;
+        }
+        100%{
+          color: black;
+        }
+      }
+    #back {
+
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -154,8 +442,28 @@ a:hover::after{
     cursor: pointer;
     padding: 15px;
     border-radius: 50px;
-}
+    }
 
-#back:hover {
-background-color: #555;
-}
+    #back:hover {
+    background-color: #555;
+    }
+    #topBtn {
+        display: none;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 99;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        background-color: white;
+        font-family: garamond;
+        color: black;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 50px;
+  }
+  
+  #topBtn:hover {
+    background-color: #555;
+  }
